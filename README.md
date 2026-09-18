@@ -133,13 +133,18 @@ Every step after "Draft outreach written" either passes a checkpoint or gets log
 
 This repository is part of building Umnograf AI in public. Expect it to update as the system evolves — new working components move up from "current development," and the roadmap gets revised rather than rewritten from scratch.
 
-## About / links
+## Connect
 
-Umnograf AI is created and operated by **Vladislav**, founder of **Umnograf**. Umnograf builds AI operating systems, AI agents, and Second Brain / knowledge-management systems for businesses — this repository documents that work.
+Built by **Vladislav (Umnograf)**, founder of Umnograf AI.
 
-- Business inquiries and partnerships: umnograf8@gmail.com
-- Documentation: [`docs/architecture.md`](docs/architecture.md) · [`docs/second-brain.md`](docs/second-brain.md) · [`docs/agents.md`](docs/agents.md)
+This repository is one entry point into the Umnograf AI ecosystem — the others:
+
+- **Telegram** — [t.me/umnograf](https://t.me/umnograf) — main channel: build-in-public updates, Second Brain and AI agent content.
+- **LinkedIn** — [linkedin.com/in/umnograf](https://www.linkedin.com/in/umnograf) — founder profile.
+- **Email** — [umnograf8@gmail.com](mailto:umnograf8@gmail.com) — business inquiries and partnerships.
+
+Documentation: [`docs/architecture.md`](docs/architecture.md) · [`docs/second-brain.md`](docs/second-brain.md) · [`docs/agents.md`](docs/agents.md)
 
 ---
 
-<sub>🇷🇺 Русскоязычный контекст и статьи о разработке Umnograf AI — в блоге и Telegram-канале Umnograf. Этот README намеренно не дублируется на двух языках.</sub>
+<sub>🇷🇺 Русскоязычный контекст и статьи о разработке Umnograf AI — в Telegram-канале Umnograf. Этот README намеренно не дублируется на двух языках.</sub>
