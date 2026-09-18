@@ -9,11 +9,30 @@ Agents that observe, coordinate, act, and escalate only what needs human judgmen
 
 ## What is Umnograf AI?
 
-Umnograf AI is an operating layer that sits on top of the tools a business already uses — Telegram, email, CRM, task management, GitHub, a knowledge base, internal data — and turns scattered signals into coordinated action.
+Umnograf AI is an **AI operating system for business**: an operating layer that sits on top of the tools a business already uses — Telegram, email, CRM, task management, GitHub, a knowledge base, internal data — and turns scattered signals into coordinated action.
 
-Instead of one chatbot bolted onto one tool, it's a small workforce of specialized AI agents that share memory, watch for signals across channels, draft and take low-risk actions, and route anything ambiguous or high-stakes to a human for approval.
+Umnograf AI combines an orchestration layer, a workforce of specialized **AI agents**, and a **Second Brain** — a knowledge and memory layer that gives agents long-term, business-specific context. Agents use signals, tools, and the Second Brain to draft and take low-risk actions, and route anything ambiguous or high-stakes to a human for approval.
 
-It does not replace the business's existing stack. It runs on top of it.
+It does not replace the business's existing stack, and it is not one chatbot bolted onto one tool. It runs on top of what's already there, as **AI agent orchestration** with a shared memory.
+
+### Entity map
+
+For anyone trying to place how these names relate:
+
+- **Umnograf** — the studio/creator building Umnograf AI.
+- **Umnograf AI** — the AI Operating System for Business described in this repository: orchestration, agents, memory, human approval.
+- **Umnograf OS** — the private, production implementation of Umnograf AI. This repository is its public architecture and proof-of-work showcase, not the implementation itself.
+- **Second Brain** — the knowledge & memory layer inside Umnograf AI. It is not the whole system; it's the substrate that AI agents read from and write to.
+- **AI Agents** — the workers: they use signals, tools, business context, and the Second Brain to perform and propose work.
+
+```
+AI Operating System
+  → Orchestration
+    → AI Agents
+      → Second Brain / Knowledge & Memory
+        → Business Tools & Data
+          → Human Approval
+```
 
 ## Problem
 
@@ -44,7 +63,7 @@ flowchart LR
     F --> G
 ```
 
-The knowledge layer (a structured, continuously maintained second brain) is shared across all agents — it's what lets an outreach draft, a content idea, and a lead record all stay consistent with each other instead of drifting apart.
+The Second Brain — a structured, continuously maintained AI knowledge base — is shared across all agents. It's what lets an outreach draft, a content idea, and a lead record all stay consistent with each other instead of drifting apart. See [`docs/architecture.md`](docs/architecture.md) for a layer-by-layer breakdown and [`docs/second-brain.md`](docs/second-brain.md) for how the memory layer works. Agent-by-agent detail lives in [`docs/agents.md`](docs/agents.md).
 
 ## AI workforce / Agents
 
@@ -68,8 +87,8 @@ Nothing customer-facing or irreversible ships without a human checkpoint. Agents
 
 These components run and are used day to day:
 
-- **Shared knowledge base ("second brain")** — a structured, continuously updated store of business knowledge, decisions, and context that every agent reads from and writes to.
-- **Retrieval / reasoning engine** — a search-and-reasoning layer over the knowledge base that agents use to ground drafts and answers in real context instead of guessing.
+- **Second Brain (AI knowledge base)** — a structured, continuously updated store of business knowledge, decisions, and context, built on an Obsidian-based note graph, that every agent reads from and writes to. Details in [`docs/second-brain.md`](docs/second-brain.md).
+- **Retrieval / reasoning engine** — a search-and-reasoning layer over the Second Brain that agents use to ground drafts and answers in real context instead of guessing.
 - **Inbound signal capture** — incoming material from messaging channels is captured, classified, and routed into the knowledge base or the task queue automatically.
 - **Content pipeline** — raw material and ideas move through a structured pipeline (capture → structure → draft → review) before publishing.
 - **Session-start orchestration** — every work session begins with the orchestrator reading current state (memory, open tasks, active projects) and reporting it back before doing anything else.
@@ -116,9 +135,10 @@ This repository is part of building Umnograf AI in public. Expect it to update a
 
 ## About / links
 
-Umnograf AI is built and operated by **Umnograf**.
+Umnograf AI is created and operated by **Vladislav**, founder of **Umnograf**. Umnograf builds AI operating systems, AI agents, and Second Brain / knowledge-management systems for businesses — this repository documents that work.
 
 - Business inquiries and partnerships: umnograf8@gmail.com
+- Documentation: [`docs/architecture.md`](docs/architecture.md) · [`docs/second-brain.md`](docs/second-brain.md) · [`docs/agents.md`](docs/agents.md)
 
 ---
 
